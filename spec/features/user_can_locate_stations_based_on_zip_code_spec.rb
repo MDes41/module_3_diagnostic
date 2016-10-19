@@ -5,6 +5,7 @@ describe 'User can search by zip' do
     visit '/'
     fill_in :search, with: 80203
     click_on 'Locate'
+    
     expect(current_path).to
     expect(response.count).to eq(10)
     expect(category)
